@@ -17,11 +17,13 @@ public class Task5 {
                 replace("_", " ").
                 replace("\"", " ");
         String[] words = word.split(" ");
+        int a = 0;
         for (int i = 0; i < words.length; i++) {
             char[] w = words[i].trim().toCharArray();
             if (w.length % 2 == 0) {
-                System.out.println(words[i].trim());
+                a += 1;
             }
         }
+        System.out.println("Чётное количество букв имеют " + a + " слов в строке");
     }
 }
