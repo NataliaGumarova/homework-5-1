@@ -18,7 +18,7 @@ public class Task4 {
                 replace("\"", " ");
         String[] words = word.split(" ");
         for (int i = 0; i < words.length; i++) {
-            String regular = "^[aAeEyYuUiIoO][a-z]+[^aAeEyYuUiIoO]$";
+            String regular = "^[aAeEyYuUiIoO][a-z]+[qQwWrRtTpPsSdDfFgGhHjJkKlLzZxXcCvVbBnNmM]$";
             boolean y = words[i].trim().matches(regular);
                 if (y) {
                  System.out.println(words[i].trim());
