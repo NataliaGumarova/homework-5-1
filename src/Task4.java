@@ -18,8 +18,7 @@ public class Task4 {
                 replace("\"", " ");
         String[] words = word.split(" ");
         for (int i = 0; i < words.length; i++) {
-            String regular = "^[aAeEyYuUiIoO][a-z]{1,189819}[qQwWrRtTpPsSdDfFgGhHjJkKlLzZxXcCvVbBnNmM]$";
-            // длина самого длинного слова в мире - 189819 букв
+            String regular = "^[aAeEyYuUiIoO][a-z]+[^aAeEyYuUiIoO]$";
             boolean y = words[i].trim().matches(regular);
                 if (y) {
                  System.out.println(words[i].trim());
