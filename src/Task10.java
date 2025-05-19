@@ -5,15 +5,18 @@ public class Task10 {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите текст");
         String text = scan.nextLine();
-        int lenght = text.length();
-        for (int i = 1; i <= text.length(); i++) {
-            for (int a = text.length()-i; a > 0; a --) {
-                System.out.print(" ");
+        if (text.length() <= 50) {
+            for (int i = 1; i <= text.length(); i++) {
+                for (int a = text.length() - i; a > 0; a--) {
+                    System.out.print(" ");
+                }
+                System.out.println(text.substring(0, i));
             }
-            System.out.println(text.substring(0,i));
-        }
-        for (int i = 1; i <= text.length(); i++) {
-            System.out.println(text.substring(i,text.length()));
+            for (int i = 1; i <= text.length(); i++) {
+                System.out.println(text.substring(i, text.length()));
+            }
+        } else {
+            System.out.println("Слишком длинный текст. Введите текст длинной не более 50 символов");
         }
     }
 }
